@@ -1,0 +1,60 @@
+{
+    "name": "clipboard-landing-page",
+    "version": "1.0.0",
+    "description": "![Design preview for the Clipboard landing page coding challenge](./design/desktop-preview.jpg)",
+    "main": "index.js",
+    "markdown": "github",
+    "license": "MIT",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://opensource.org/license/mit/"
+        }
+    ],
+    "author": {
+        "name": "Khaled Mohamed",
+        "email": "k.mohamed.11.98@gmail.com",
+        "url": "https://github.com/krypton225"
+    },
+    "contributors": [
+        "Khaled Mohamed"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krypton225/clipboard-landing-page-mentor"
+    },
+    "homepage": "https://github.com/krypton225/clipboard-landing-page-mentor#readme",
+    "scripts": {
+        "dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,red\" \"npm run server\" \"npm run sass:watch\" \"npm run sass:comp\" \"npm run p-js\"",
+        "server": "live-server --open=./index.html",
+        "p-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
+        "sass:watch": "sass --no-source-map ./src/scss/index.scss:dist/styles.css --watch",
+        "sass:comp": "sass --no-source-map ./src/scss/index.scss:dist/styles.min.css --watch --style=compressed",
+        "upgrade": "ncu --upgrade",
+        "cmt": "cz",
+        "tags": "git push repo --tags",
+        "gen:lock": "npm i --package-lock-only"
+    },
+    "keywords": [
+        "Pug JS",
+        "SCSS",
+        "SASS",
+        "Front End Mentor Challenge"
+    ],
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "cz-conventional-changelog": "^3.3.0",
+        "live-server": "^1.2.2",
+        "pug": "^3.0.2",
+        "pug-cli": "^1.0.0-alpha6",
+        "sass": "^1.69.7"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.5.1"
+    }
+}

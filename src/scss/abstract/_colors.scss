@@ -1,0 +1,14 @@
+@use "sass:string";
+
+$colors-map: (
+    "primary-1": hsl(171, 66%, 44%),
+    "primary-2": hsl(201, 11%, 66%),
+    "secondary-1": hsl(233, 100%, 69%),
+    "secondary-2": hsl(210, 10%, 33%)
+);
+
+:root {
+    @each $clr, $value in $colors-map {
+        --#{$clr}-#{"clr"}: #{$value};
+    }
+}
