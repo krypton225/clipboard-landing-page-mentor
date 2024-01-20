@@ -1,0 +1,50 @@
+include ./mixins/index
+
+doctype html
+html(lang="en")
+    head
+        +meta-data
+        +meta-desc("This is just a task in front end mentor for training!")
+        +meta-keywords("HTML, PUG JS, SCSS, CSS, Landing Page")
+
+        +line
+
+        link(rel="icon" href="./public/assets/images/favicons/favicon.ico")
+        link(rel="apple-touch-icon" href="./public/assets/images/favicons/apple-touch-icon.png")
+        link(rel="manifest" href="./public/assets/images/favicons/site.webmanifest.json")
+
+        +line
+
+        link(rel="stylesheet" href="./dist/styles.css")
+
+        +line
+
+        title Clipboard Landing Page | Front End Mentor Training
+    body 
+        main.main#main
+            section.first
+                picture.first__bg
+                    source(media="(min-width: 381px)" srcset="./public/assets/images/bg-header-desktop.png")
+                    source(media="(max-width: 380px)" srcset="./public/assets/images/bg-header-mobile.png")
+                    img(src="./public/assets/images/bg-header-desktop.png" alt="Background Header")
+
+                +line
+
+                .first__content
+                    .first__content__logo 
+                        svg(width='125' height='125' xmlns='http://www.w3.org/2000/svg')
+                            g(stroke='#26BBA4' stroke-width='10' fill='none' fill-rule='evenodd')
+                                circle(cx='62.5' cy='62.5' r='57.5')
+                                path(d='M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0' stroke-linecap='round')
+
+                    +line
+
+                    +top-sec("A history of everything you copy", "Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.")
+
+                    +line
+
+                    .first__content__downloads
+                        button.btn.btn-green.first__content__downloads__ios Download for IOS
+                        button.btn.btn-blue.first__content__downloads__mac Download for Mac
+
+            +line

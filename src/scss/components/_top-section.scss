@@ -1,0 +1,26 @@
+.top-sec {
+    width: 100%;
+    padding-inline: 0.35rem;
+    text-align: center;
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: var(--secondary-2-clr);
+    }
+
+    &__desc {
+        width: 100%;
+        margin-inline: auto;
+        color: #b8b8b8;
+        font-size: 1rem;
+
+        @media (min-width: 576px) {
+            width: 60%;
+        }
+
+        @media (min-width: 991px) {
+            width: 47%;
+        }
+    }
+}

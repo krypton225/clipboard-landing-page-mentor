@@ -81,6 +81,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+section {
+  padding-block: 4rem;
+}
+
 @font-face {
   font-display: swap;
   font-family: "Bai Jamjuree";
@@ -100,4 +104,113 @@ select {
   --primary-2-clr: hsl(201, 11%, 66%);
   --secondary-1-clr: hsl(233, 100%, 69%);
   --secondary-2-clr: hsl(210, 10%, 33%);
+}
+
+.btn {
+  padding: 0.5rem 1.4rem;
+  border: none;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.22s ease-in;
+}
+.btn.btn-green {
+  background-color: var(--primary-1-clr);
+}
+.btn.btn-green:hover {
+  box-shadow: 0 5px 4px rgba(29, 144, 127, 0.4);
+}
+.btn.btn-blue {
+  background-color: var(--secondary-1-clr);
+}
+.btn.btn-blue:hover {
+  box-shadow: 0 5px 4px rgba(77, 97, 255, 0.4);
+}
+
+.top-sec {
+  width: 100%;
+  padding-inline: 0.35rem;
+  text-align: center;
+}
+.top-sec__title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--secondary-2-clr);
+}
+.top-sec__desc {
+  width: 100%;
+  margin-inline: auto;
+  color: #b8b8b8;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .top-sec__desc {
+    width: 60%;
+  }
+}
+@media (min-width: 991px) {
+  .top-sec__desc {
+    width: 47%;
+  }
+}
+
+.first {
+  width: 100%;
+  min-height: 50vh;
+  padding-top: 7rem;
+  position: relative;
+  text-align: center;
+}
+.first__bg {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.first__bg source,
+.first__bg img {
+  width: 100%;
+  object-fit: cover;
+}
+.first__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.first__content__desc {
+  width: 100%;
+  padding-inline: 0.35rem;
+  text-align: center;
+}
+.first__content__desc__one {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--secondary-2-clr);
+}
+.first__content__desc__second {
+  width: 100%;
+  margin-inline: auto;
+  color: #b8b8b8;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .first__content__desc__second {
+    width: 60%;
+  }
+}
+@media (min-width: 991px) {
+  .first__content__desc__second {
+    width: 47%;
+  }
+}
+.first__content__downloads {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

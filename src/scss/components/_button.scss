@@ -1,0 +1,27 @@
+.btn {
+    padding: 0.5rem 1.4rem;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.22s ease-in;
+
+    &.btn-green {
+        background-color: var(--primary-1-clr);
+
+        &:hover {
+            box-shadow: 0 5px 4px rgba(hsl(171, 66%, 34%), 0.4);
+        }
+    }
+
+    &.btn-blue {
+        background-color: var(--secondary-1-clr);
+
+        &:hover {
+            box-shadow: 0 5px 4px rgba(hsl(233, 100%, 65%), 0.4);
+        }
+    }
+}
